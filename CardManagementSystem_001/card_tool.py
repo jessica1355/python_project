@@ -3,6 +3,7 @@ card_list = []
 
 
 def show_mune():
+	"""显示菜单"""
 	print("*" * 50)
 	print("欢迎使用【名片管理系统】")
 	print("")
@@ -13,7 +14,11 @@ def show_mune():
 	print("0.退出系统")
 	print("*" * 50)
 
+
 def add_card():
+
+	"""增加名片"""
+
 	print("增加名片")
 	print("-" * 50)
 	name_str = input("请输入姓名")
@@ -31,19 +36,23 @@ def add_card():
 	print("增加%s名片成功" % name_str)
  
 
-
 def show_card():
+
+	"""打印所有名片"""
+
 	print("显示所有名片")
 	print("-" * 50)
 
     if len(card_list) == 0:
 
     print("当前没有任何的名片记录，请使用新增功能添加名片！")
+ 
 
     # return 可以返回一个函数的执行结果
     # 下方的代码不会被执行
     # 如果 return 后面没有任何的内容，表示会返回到调用函数的位置
     # 并且不返回任何的结果
+
     return
 
 	for char1 in ["姓名", "电话", "QQ", "邮箱"]：
@@ -59,6 +68,9 @@ def show_card():
 
 
 def deal_card(card):
+
+	"""修改/删除名片"""
+
 	print("1.修改%s的名片" % card["name"])
         print("2.删除%s的名片" % card["name"])
         print("")
@@ -77,6 +89,9 @@ def deal_card(card):
 
 
 def search_card():
+
+	"""查找名片"""
+	
 	print("查找名片")
 	print("-" * 50)
 
